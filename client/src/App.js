@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ToDoPage from "./pages/ToDoPage";
 import NavMenu from "./components/NavMenu";
 import UserPage from "./pages/UserPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/todo" element={<ToDoPage />} />
         <Route path="/users" element={<UserPage />} />
+        <Route path="/sign-up" element={<RegistrationPage />} />
       </Routes>
     </BrowserRouter>
   );

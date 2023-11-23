@@ -8,7 +8,7 @@ const httpCLient = axios.create({
 export const getAllUsers = (options = {}) => {
   const defaultOptions = {
     page: 1,
-    amount: 15,
+    amount: 5,
   };
   const finalyOptions = {
     ...defaultOptions,
@@ -16,3 +16,5 @@ export const getAllUsers = (options = {}) => {
   };
   return httpCLient.get(`/users?${qs.stringify(finalyOptions)}`);
 };
+
+export const createUser = (values) => httpCLient.post("./users", values);
